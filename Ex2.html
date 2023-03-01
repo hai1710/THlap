@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let a = parseInt(prompt('nhập nhiệt độ: '));
+    // if (a >= 100) {
+    //     document.write("Cần giảm nhiệt độ.");
+    // } else if (a <= 20) {
+    //     document.write("Cần tăng nhiệt độ.");
+    // } else {
+    //     document.write("Nhiệt độ bình thường");
+    // }
+    let a = prompt('Nhập nhiệt độ: ');
+    let i
+    for (i = parseInt(a); i < 1000; i++) {
+        if (i > 100) {
+            document.write("Cần giảm nhiệt độ ngay.");
+        } else if (i < 20) {
+            document.write("Cầm tăng nhiệt độ ngay");
+        }
+    }
+</script>
+</body>
+</html>
