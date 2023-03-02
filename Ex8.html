@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="playGame()">Đoán số</button>
+<!--<input type="button" onclick="playGame()" value="Đoán Số">;-->
+<script>
+    function playGame() {
+        let gioiHan = parseInt(prompt('Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?'));
+        let num_ran = Math.floor(Math.random() * gioiHan);
+        console.log(num_ran);
+        let doanSo = parseInt(prompt("Số bạn đoán là:"));
+        let cont = 0
+        if (num_ran != doanSo) {
+            for (let i = 0; i < gioiHan; i++) {
+                cont++;
+                if (cont == 4) {
+                    alert('Bạn đã hết lượt đoán.');
+                    break
+                } else if (doanSo > num_ran) {
+                    alert("số vừa bạn đoán lớn hơn đáp án");
+                } else {
+                    alert("số bạn vừa đoán bé hơn đáp án")
+                }
+                doanSo = prompt("số bạn đoán là: ")
+            if (num_ran == doanSo) {
+                    alert("Chúc mừng bạn đã đoán đúng");
+                    break
+                }
+            }
+            // if (cont == 4) {
+            //     alert('Bạn đã hết lượt đoán.');
+            // } else {
+            //     Document.write("Chúc mừng bạn đã đoán số" + doanSo + "là số đúng")
+            // }
+
+        } else {
+           alert("Chúc mừng bạn đã đoán đúng");
+        }
+
+    }
+</script>
+</body>
+</html>
